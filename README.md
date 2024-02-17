@@ -1,3 +1,5 @@
+![쿨청소꾼](https://coolcleaner.co.kr/fileDownLoad/170820107871644.png)
+
 # 쿨청소꾼 - 청소업체 홍보 및 신청 사이트
 
 청소를 필요로 하는 고객이 방문하여 업체 정보를 확인하고 온라인 신청까지 진행 할 수 있도록 제작된 홈페이지 입니다.
@@ -8,20 +10,16 @@
 <br>
 
 ### Tech Stack
-***
-F/E : React18 , TypeScripts , JavaScripts , Redux(RTK) , Jest , RTL , SCSS \
-B/E : JAVA , Spring Framework , JPA , MyBatis \
-SERVER : Ubuntu 19\
+F/E : React18 , TypeScripts , JavaScripts , Redux(RTK) , Jest , RTL , SCSS  
+B/E : JAVA , Spring Framework , JPA , MyBatis  
+SERVER : Ubuntu 19 
 D/B : Oracle 10e
 
 ### Contribution
-***
-`기정환 단독개발` 기여도 100%
-<br><br><br>
-### Screen
-***
+`기정환 단독개발`
 
-![Main](https://coolcleaner.co.kr/fileDownLoad/1706293843552pc_mobile.png)
+### Screen
+
 ![Pages](https://coolcleaner.co.kr/fileDownLoad/1706301602187screen1.png)
 
 ### 주요기능
@@ -117,91 +115,8 @@ observer를 활성화 시키지 않아 불필요한 subscribe의 memory leak을 
 <br>
 
 ### TDD
-***
->RTL과 JEST를 활용하여 몇가지 기능에 대한 테스트를 진행하였습니다.  
-
-```HTML
-
-describe("Main Page Render & Order popup Event Tests", () => {
-    it("Main Page Render Test", async () => {
-        render(
-            <Provider store={reducer}>
-                <ServiceList/>
-                </Provider>
-        );
-
-        //find element DOM
-        const element = screen.getByText("데이터로 증명합니다");
-        expect(element).toBeInTheDocument();
-
-        //check element class
-        expect(element).toHaveClass("content1-title");
-
-    });
-
-    it("Order Click Event & set Redux Value Test", async () => {
-        render(
-            <Provider store={reducer}>
-                <App/>
-                </Provider>,
-        );
-        //open Order Popup
-        fireEvent.click(screen.getByText("빠른 상담 신청"));
-        expect(screen.getByText("빠른 상담 신청")).toBeInTheDocument();
-
-        //check redux order value
-        expect(reducer.getState().order.value.cleaning).toEqual("");
-
-        //Click Button Event
-        fireEvent.click(screen.getByRole("button", {name: '입주 청소'}));
-
-        //check change redux order value
-        expect(reducer.getState().order.value.cleaning).toEqual("입주청소");
-
-        //same event
-        fireEvent.click(screen.getByRole("button", {name: '서울'}));
-        expect(reducer.getState().order.value.locale).toEqual("서울");
-
-        //change selectBox option
-        fireEvent.change(screen.getByRole("combobox"), {target: {value: '11평형 ( 36.3㎡ )'}});
-        expect(reducer.getState().order.value.py).toEqual("11평형 ( 36.3㎡ )");
-
-        //change input value
-        fireEvent.change(screen.getByRole("textbox"), {target: {value: "01033334444"}});
-        expect(reducer.getState().order.value.phone).toEqual("01033334444");
-    });
-});
-
-```
-element 체크 및 order 처리 과정에 대한 테스트를 샘플로 작성하였습니다
-<br><br>
-### Start Project
-***
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> RTL과 JEST를 활용하여 몇가지 기능에 대한 테스트를 진행하였습니다.  
+>element 체크 및 order 처리 과정에 대한 테스트를 샘플로 작성하였습니다
 
 ### LICENSE
 ***
