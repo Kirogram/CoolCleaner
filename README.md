@@ -10,10 +10,10 @@
 <br>
 
 ### Tech Stack
-F/E : React18 , TypeScripts , JavaScripts , Redux(RTK) , Jest , RTL , SCSS  
-B/E : JAVA , Spring Framework , JPA , MyBatis  
-SERVER : Ubuntu 19 
-D/B : Oracle 10e
+**Front-End** : React18 , TypeScripts , JavaScripts , Redux(RTK) , Jest , RTL , SCSS  
+**Back-End** : JAVA , Spring Framework , JPA , MyBatis  
+**SERVER** : Ubuntu 19  
+**DataBase** : Oracle 10e
 
 ### Contribution
 `기정환 단독개발`
