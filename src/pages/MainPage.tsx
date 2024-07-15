@@ -1,31 +1,32 @@
 import React from 'react';
-import HeadCarousel from "../components/HeadCarousel";
-import CleaningService from "../components/CleaningService";
-import PriceContent from "../components/PriceContent";
-import Portfolio from "../components/Portfolio";
-import Benefit from "../components/Benefit";
-import Locale from "../components/Locale";
-import CheckPoint from "../components/CheckPoint";
-import Reviews from "../components/Reviews";
-import ServiceList from "../components/ServiceList";
-import GoodPoint from "../components/GoodPoint";
+import {HeroSection} from "../components/heroSection/HeroSection";
+import {CleaningList} from "../components/cleaningService/CleaningList";
+import {Portfolio} from "../components/portfolio/Portfolio";
+import {CleaningProcess} from "../components/cleaningProcess/cleaningProcess";
+import {CleaningEvent} from "../components/cleaningEvent/CleaningEvent";
+import {CleaningPrice} from "../components/cleaningPrice/CleaningPrice";
+import {CleaingPoint} from "../components/cleaningPoint/CleaingPoint";
+import {CleaningReview} from "../components/cleaningReview/CleaningReview";
+import {CleaningInformation} from "../components/cleaningInformation/CleaningInformation";
+import {CleaningDistance} from "../components/cleaningDistance/CleaningDistance";
+import {Statistics} from "../components/statistics/Statistics";
 
-const MainPage = () => {
+export function MainPage() {
     return (
         <>
-            <HeadCarousel></HeadCarousel>
-            <ServiceList></ServiceList>
+            <HeroSection></HeroSection>
+            <div className="flex-default option-flex-center-vertical">
+                <Statistics></Statistics>
+                <CleaningList></CleaningList>
+            </div>
             <Portfolio></Portfolio>
-            <Benefit></Benefit>
-            <GoodPoint></GoodPoint>
-            <PriceContent></PriceContent>
-            <CheckPoint></CheckPoint>
-            <Reviews></Reviews>
-            <CleaningService></CleaningService>
-            {/*<MyComponent></MyComponent>*/}
-            <Locale></Locale>
+            <CleaningProcess></CleaningProcess>
+            <CleaningEvent></CleaningEvent>
+            <CleaningPrice></CleaningPrice>
+            <CleaingPoint></CleaingPoint>
+            <CleaningReview></CleaningReview>
+            <CleaningInformation></CleaningInformation>
+            <CleaningDistance></CleaningDistance>
         </>
     )
 }
-
-export default MainPage;

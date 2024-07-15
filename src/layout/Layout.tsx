@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from "./Header";
-import Footer from "./Footer";
-import '../../App.scss';
+import '../App.scss';
+import {Header} from "./Header";
+import {Footer} from "./Footer";
 
-const Layout = (props: {
-    children: React.ReactNode
-}) => {
+export function Layout(props: { children: React.ReactNode }) {
     return (
         <>
             <div className="body">
@@ -16,4 +14,3 @@ const Layout = (props: {
         </>
     )
 }
-export default Layout;

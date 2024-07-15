@@ -1,13 +1,12 @@
 import React from 'react';
-import CleaningService from "../components/CleaningService";
-import CheckPoint from "../components/CheckPoint";
+import {CleaingPoint} from "../components/cleaningPoint/CleaingPoint";
+import {CleaningInformation} from "../components/cleaningInformation/CleaningInformation";
 
-const AboutCool = () => {
+export function AboutCool() {
     return (
-        <div>
-            <CleaningService></CleaningService>
-            <CheckPoint></CheckPoint>
-        </div>
+        <>
+            <CleaningInformation></CleaningInformation>
+            <CleaingPoint></CleaingPoint>
+        </>
     )
 }
-export default AboutCool;

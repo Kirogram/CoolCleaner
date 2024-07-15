@@ -1,13 +1,12 @@
 import React from 'react';
-import Benefit from "../components/Benefit";
-import ServiceList from "../components/ServiceList";
+import {CleaningList} from "../components/cleaningService/CleaningList";
+import {CleaningProcess} from "../components/cleaningProcess/cleaningProcess";
 
-const ServiceRange = () => {
+export function ServiceRange() {
     return (
-        <div>
-            <Benefit></Benefit>
-            <ServiceList></ServiceList>
-        </div>
+        <>
+            <CleaningProcess></CleaningProcess>
+            <CleaningList></CleaningList>
+        </>
     )
 }
-export default ServiceRange;

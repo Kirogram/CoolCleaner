@@ -3,15 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {Provider} from "react-redux";
-import reducer from "./reducers/reducer";
+import {RecoilRoot} from "recoil";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
-    <Provider store={reducer}>
+    <RecoilRoot>
         <App/>
-    </Provider>
+    </RecoilRoot>
 );
 reportWebVitals();

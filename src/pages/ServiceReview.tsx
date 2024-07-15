@@ -1,11 +1,10 @@
 import React from 'react';
-import Reviews from "../components/Reviews";
+import {CleaningReview} from "../components/cleaningReview/CleaningReview";
 
-const ServiceReview = () => {
+export function ServiceReview() {
     return (
-        <div>
-            <Reviews></Reviews>
-        </div>
+        <>
+            <CleaningReview></CleaningReview>
+        </>
     )
 }
-export default ServiceReview;
